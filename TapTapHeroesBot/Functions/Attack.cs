@@ -53,8 +53,11 @@ namespace TapTapHeroesBot.Functions
 
         public static void DenOfSecretAttackHandler()
         {
+            //Gets Attention of screen incase its not ontop
             WindowCapture.CaptureApplication("Nox");
-            
+
+            Main.IdleClick(10);
+
             //Opening Up Castle and Selecting DOS
             MouseHandler.MoveCursorRealPos(LocationConstants.HOME_BOTTOM_CASTLE_LOCATION, true);
             MouseHandler.MoveCursorRealPos(LocationConstants.IDLE_CLICK);
@@ -82,7 +85,7 @@ namespace TapTapHeroesBot.Functions
                     MouseHandler.MoveCursorRealPos(LocationConstants.GLOBAL_BATTLE_TEAM_CONFIRM_LOCATION, true);
                     Thread.Sleep(2000);
                     MouseHandler.MoveCursorRealPos(LocationConstants.GLOBAL_BATTLE_SKIP_LOCATION, true);
-
+                    MouseHandler.MoveCursorRealPos(LocationConstants.GLOBAL_BATTLE_SKIP_CONFIRM_LOCATION, true);
                     bool BattleFinished = false;
 
                     while (!BattleFinished)
@@ -95,11 +98,8 @@ namespace TapTapHeroesBot.Functions
                         }
                     }
 
-                    bool victory = false;
-
                     if (PixelChecker.CheckPixelValue(LocationConstants.GLOBAL_BATTLE_WINCHECK_LOCATION, ColourConstants.GLOBAL_BATTLE_VICTORY))
                     {
-                        victory = true;
                         Thread.Sleep(1000);
                         MouseHandler.MoveCursorRealPos(LocationConstants.GLOBAL_BATLE_FINISHED_LOCATION, true);
                         break;

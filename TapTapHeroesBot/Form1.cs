@@ -104,7 +104,7 @@ namespace TapTapHeroesBot
 
         public void UpgradeHeroes(Point ProcLocation)
         {
-            MoveCursor(LocationConstants.HOME_HEROES_LOCATION, ColourConstants.HOME_HEROES_BUTTON_COLOR, ProcLocation);
+            MoveCursor(LocationConstants.HOME_BOTTOM_HEROES_LOCATION, ColourConstants.HOME_HEROES_BUTTON_COLOR, ProcLocation);
 
             Random Rand = new Random();
             int RanNum = Rand.Next(20);
@@ -143,7 +143,7 @@ namespace TapTapHeroesBot
             {
                 for (int i = 1; i < 6; i++)
                 {
-                    MoveCursor(LocationConstants.HOME_HEROES_LOCATION, ColourConstants.HOME_HEROES_BUTTON_COLOR, ProcLocation);
+                    MoveCursor(LocationConstants.HOME_BOTTOM_HEROES_LOCATION, ColourConstants.HOME_HEROES_BUTTON_COLOR, ProcLocation);
                     MoveCursor(LocationConstants.HEROES_SIXTH_HERO_LOCATION, ColourConstants.HEROES_HERO_BUTTON_COLOR, ProcLocation);
                     for(int x = 1; x < 5; x++)
                     {
@@ -224,7 +224,7 @@ namespace TapTapHeroesBot
         private void Button5_Click(object sender, EventArgs e)
         {
             Bitmap BMP = WindowCapture.CaptureApplication("Nox");
-            BMP.Save("Image.bmp", ImageFormat.Bmp);
+            BMP.Save("Image.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
             this.BackgroundImage = BMP;
             MouseHandler.MoveCursorRealPos(new Point(500, 800));
             MouseWheelDown();
@@ -233,6 +233,16 @@ namespace TapTapHeroesBot
         private void Button6_Click(object sender, EventArgs e)
         {
             Attack.DenOfSecretAttackHandler();
+        }
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+            Main.ResetToHome();
+        }
+
+        private void Button8_Click(object sender, EventArgs e)
+        {
+            ImageToText.GetMoneyAmount();
         }
     }
 

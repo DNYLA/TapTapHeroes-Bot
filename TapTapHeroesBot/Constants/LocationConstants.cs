@@ -14,9 +14,10 @@ namespace TapTapHeroesBot.Constants
         public static Point GLOBAL_BATTLE_ENEMYINFO_CONFIRM_LOCATION = new Point(320, 735);
         public static Point GLOBAL_BATTLE_TEAM_CONFIRM_LOCATION = new Point(315, 880);
         public static Point GLOBAL_BATTLE_SKIP_LOCATION = new Point(514, 861);
+        public static Point GLOBAL_BATTLE_SKIP_CONFIRM_LOCATION = new Point(180, 620);
         public static Point GLOBAL_BATLE_FINISHED_LOCATION = new Point(314, 860);
         public static Point GLOBAL_BATTLE_WINCHECK_LOCATION = new Point(285, 449);
-        public static Point IDLE_CLICK = new Point(352, 757);
+        public static Point IDLE_CLICK = new Point(300, 725);
 
 
         //Home Screen Buttons
@@ -26,12 +27,15 @@ namespace TapTapHeroesBot.Constants
         public static Point HOME_NEXT_SELECT_BATTLE_LOCATION = new Point(313, 679);
 
         //Home Bottom Buttons
-        public static Point HOME_HEROES_LOCATION = new Point(46, 909);
+        public static Point HOME_BOTTOM_HEROES_LOCATION = new Point(46, 909);
         public static Point HOME_BOTTOM_CASTLE_LOCATION = new Point(404, 941);
+        public static Point HOME_BOTTOM_BATTLE_LOCATION = new Point(270, 980);
+        public static Point HOME_BOTTOM_ACTIVE_BATTLE_LOCATION = new Point(296, 902);
 
         //Menu Buttons
         public static Point MENU_QUESTS_BUTTON_LOCATION = new Point(60, 424);
         public static Point MENU_MAIL_LOCATION = new Point(60, 763);
+        public static Point MENU_OPTIONS_LOCATION = new Point(49, 866);
 
         //Quest Constants
         public static Point QUEST_CLAIMAIN_LOCATION = new Point(445, 245);

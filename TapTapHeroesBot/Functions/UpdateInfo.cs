@@ -57,6 +57,11 @@ namespace TapTapHeroesBot.Functions
         public static Boolean MailEmpty()
         {
 
+            if (!Main.ResetToHome())
+            {
+                return false;
+            }
+
             Thread.Sleep(500);
             MouseHandler.MoveCursorRealPos(LocationConstants.HOME_MAINMENU_LOCATION, true);
             if (PixelChecker.CheckPixelValue(LocationConstants.MENU_MAIL_LOCATION, ColourConstants.MENU_REDINFO_MAIL_COLOR))
@@ -67,13 +72,14 @@ namespace TapTapHeroesBot.Functions
 
                 while (PixelChecker.CheckPixelValue(LocationConstants.MAIL_RECEIVE, ColourConstants.MAIL_DELETE))
                 {
-                    MouseHandler.MoveCursor(LocationConstants.MAIL_RECEIVE, true);
+                    MouseHandler.MoveCursorRealPos(LocationConstants.MAIL_RECEIVE, true);
                 }
             }
             else
             {
                 MouseHandler.MoveCursorRealPos(LocationConstants.IDLE_CLICK, true);
             }
+            Main.ResetToHome();
 
             return true;
         }

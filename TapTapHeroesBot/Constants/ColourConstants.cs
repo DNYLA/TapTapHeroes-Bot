@@ -29,10 +29,14 @@ namespace TapTapHeroesBot.Constants
         //Menu Constants
         public static Color REDINFO_CIRCLE_MENU_QUESTS_COLOR = Color.FromArgb(255, 69, 16);
         public static Color MENU_REDINFO_MAIL_COLOR = Color.FromArgb(255, 68, 14);
+        public static Color MENU_OPTIONS_COLOR = Color.FromArgb(0, 199, 255);
 
         //Home Constants
         public static Color HOME_HEROES_BUTTON_COLOR = Color.FromArgb(68, 62, 83);
         public static Color HOME_NEXT_BATTLE_COLOR = Color.FromArgb(223, 204, 69);
+
+        //Home Bottom
+        public static Color HOME_BOTTOM_ACTIVE_BATTLE_COLOR = Color.FromArgb(223, 232, 242);
 
         //Hero Menu
         public static Color HEROES_HERO_BUTTON_COLOR = Color.FromArgb(254, 224, 50);
