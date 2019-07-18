@@ -26,7 +26,7 @@ namespace TapTapHeroesBot.Functions
         public static Boolean ResetToHome()
         {
             //Force Back To Main Menu && Collects Any Gold (Thats Why Its ran 10 times)
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 8; i++)
             {
                 MouseHandler.MoveCursorRealPos(LocationConstants.HOME_BOTTOM_BATTLE_LOCATION, true);
             }
@@ -60,6 +60,15 @@ namespace TapTapHeroesBot.Functions
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Sleep Handler
+        /// </summary>
+        /// <param name="seconds"> Amount of seconds to sleep for </param>
+        public static void Sleep(int seconds)
+        {
+            System.Threading.Thread.Sleep(seconds * 1000);
         }
 
         public static Boolean isHome()

@@ -42,7 +42,6 @@ namespace TapTapHeroesBot.Functions
         public static void MouseWheelUp()
         {
             mouse_event((uint)MouseEventFlags.WHEEL, 0, 0, 120, 0);
-            Thread.Sleep(1000);
         }
 
         public static void MouseWheelDown()

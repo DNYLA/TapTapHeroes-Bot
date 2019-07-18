@@ -56,7 +56,8 @@ namespace TapTapHeroesBot.Functions
             //Gets Attention of screen incase its not ontop
             WindowCapture.CaptureApplication("Nox");
 
-            Main.IdleClick(10);
+            Main.ResetToHome();
+
 
             //Opening Up Castle and Selecting DOS
             MouseHandler.MoveCursorRealPos(LocationConstants.HOME_BOTTOM_CASTLE_LOCATION, true);
@@ -64,7 +65,7 @@ namespace TapTapHeroesBot.Functions
             MouseHandler.ResetCastle();
             Thread.Sleep(2500);
             MouseHandler.MouseWheelUp();
-            Thread.Sleep(1500);
+            Thread.Sleep(1000);
             MouseHandler.MouseWheelUp();
             Thread.Sleep(1500);
             MouseHandler.MoveCursorRealPos(LocationConstants.CASTLE_DOS_LOCATION, true);

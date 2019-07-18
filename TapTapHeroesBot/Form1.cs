@@ -242,7 +242,17 @@ namespace TapTapHeroesBot
 
         private void Button8_Click(object sender, EventArgs e)
         {
-            ImageToText.GetMoneyAmount();
+            int GoldAmount = ImageToText.GetMoneyAmount();
+            int GemAmount = ImageToText.GetGemAmount();
+            int PlayerLevel = ImageToText.GetLevel();
+            int PurpleSoulAmount = ImageToText.GetPurpleSoulAmount();
+            int GoldenSoulAmount = ImageToText.GetGoldenSoulAmount();
+            MessageBox.Show($"Gold: {GoldAmount}; Gems: {GemAmount}; Level: {PlayerLevel}; Purple Souls: {PurpleSoulAmount}; Golden Souls: {GoldenSoulAmount}");
+        }
+
+        private void Button9_Click(object sender, EventArgs e)
+        {
+            OpenObject.OpenAltar();
         }
     }
 

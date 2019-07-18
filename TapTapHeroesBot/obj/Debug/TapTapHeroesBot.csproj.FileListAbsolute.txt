@@ -11,13 +11,13 @@ D:\Visual Studio\2019\TapTapHeroesBot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.
 D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\bin\Debug\TapTapHeroesBot.exe.config
 D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\bin\Debug\TapTapHeroesBot.exe
 D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\bin\Debug\TapTapHeroesBot.pdb
-D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.csprojAssemblyReference.cache
+D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\bin\Debug\IronOcr.dll
+D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\bin\Debug\IronOcr.xml
 D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.Form1.resources
 D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.Properties.Resources.resources
 D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.csproj.GenerateResource.cache
 D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.csproj.CoreCompileInputs.cache
+D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.csproj.CopyComplete
 D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.exe
 D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.pdb
-D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.csproj.CopyComplete
-D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\bin\Debug\IronOcr.dll
-D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\bin\Debug\IronOcr.xml
+D:\Visual Studio\2019\TapTapHeroes-Bot\TapTapHeroesBot\obj\Debug\TapTapHeroesBot.csprojAssemblyReference.cache

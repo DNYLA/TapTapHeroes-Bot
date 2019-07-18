@@ -69,6 +69,7 @@
     <Compile Include="Functions\ImageToText.cs" />
     <Compile Include="Functions\Main.cs" />
     <Compile Include="Functions\MouseHandler.cs" />
+    <Compile Include="Functions\OpenObject.cs" />
     <Compile Include="Functions\PixelChecker.cs" />
     <Compile Include="Functions\UpdateInfo.cs" />
     <Compile Include="GlobalVariables.cs" />
