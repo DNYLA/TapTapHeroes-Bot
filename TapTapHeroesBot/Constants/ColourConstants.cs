@@ -57,9 +57,9 @@ namespace TapTapHeroesBot.Constants
         public static Color BATTLE_VICTORY_COLOR = Color.FromArgb(178, 34, 63);
 
         //CASTLE 
-        public static Color CASTLE_BLACKSMITH_COLOR = Color.FromArgb(179, 135, 72);
-        public static Color CASTLE_HERO_CHEST_CHECK_COLOR = Color.FromArgb(144, 68, 63);
+        public static Color CASTLE_BLACKSMITH_COLOR = Color.FromArgb(187, 91, 70);
+        public static Color CASTLE_HERO_CHEST_CHECK_COLOR = Color.FromArgb(160, 100, 39);
         public static Color CASTLE_ALTAR_COLOR = Color.FromArgb(196, 88, 68);
-
+        public static Color CASTLE_MARKET_CHECK_COLOR = Color.FromArgb(170, 152, 120);
     }
 }

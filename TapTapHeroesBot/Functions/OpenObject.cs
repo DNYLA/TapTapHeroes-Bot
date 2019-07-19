@@ -65,8 +65,42 @@ namespace TapTapHeroesBot.Functions
             else
             {
                 //TODO: Max 3 Retry for recalling function
-                OpenHeroChest(); //Tries Again Until it is clicked
+                OpenAltar(); //Tries Again Until it is clicked
             }
         }
+
+        public static void OpenMarket()
+        {
+            OpenCastle();
+
+            if (PixelChecker.CheckPixelValue(LocationConstants.CASTLE_MARKET_CHECK_LOCATION, ColourConstants.CASTLE_MARKET_CHECK_COLOR))
+            {
+                MouseHandler.MoveCursorRealPos(LocationConstants.CASTLE_MARKET_LOCATION, true);
+            }
+            else
+            {
+                //TODO: Max 3 Retry for recalling function
+                OpenMarket(); //Tries Again Until it is clicked
+            }
+        }
+
+
+        public static void OpenCreationBag()
+        {
+            OpenCastle();
+
+            //Uses same Check as Above since its hard to check for creating bag since its an animation
+            if (PixelChecker.CheckPixelValue(LocationConstants.CASTLE_MARKET_CHECK_LOCATION, ColourConstants.CASTLE_MARKET_CHECK_COLOR))
+            {
+                MouseHandler.MoveCursorRealPos(LocationConstants.CASTLE_CREATION_BAG_LOCATION, true);
+            }
+            else
+            {
+                //TODO: Max 3 Retry for recalling function
+                OpenMarket(); //Tries Again Until it is clicked
+            }
+        }
+
+
     }
 }
