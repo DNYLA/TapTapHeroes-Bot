@@ -56,7 +56,7 @@ namespace TapTapHeroesBot.Constants
         public static Point BOSS_BATTLE_FINISHED_BACK_LOCATION = new Point(274, 431);
 
         //Castle Buttons
-        public static Point CASTLE_DOS_LOCATION = new Point(395, 328);
+        public static Point CASTLE_SCROLL_LOCATION = new Point(503, 600);
         public static Point CASTLE_BLACKSMITH_LOCATION = new Point(359, 703);
         public static Point CASTLE_HERO_CHEST_CHECK_LOCATION = new Point(80, 514);
         public static Point CASTLE_HERO_CHEST_LOCATION = new Point(320, 545);
@@ -64,8 +64,15 @@ namespace TapTapHeroesBot.Constants
         public static Point CASTLE_MARKET_CHECK_LOCATION = new Point(296, 234);
         public static Point CASTLE_MARKET_LOCATION = new Point(387, 266);
         public static Point CASTLE_CREATION_BAG_LOCATION = new Point(230, 140);
-        public static Point CASTLE_FORTUNE_WHEEL_LOCATION = new Point(258, 669);
 
+        //Obsolute: Don't need the below as a more efficient method is now used
+        public static Point CASTLE_FORTUNE_WHEEL_LOCATION = new Point(193, 669);
+        public static Point CASTLE_ARENA_LOCATION = new Point(260, 400);
+        public static Point CASTLE_DOS_LOCATION = new Point(378, 220);
+        public static Point CASTLE_MIRCLE_EYE_LOCATION = new Point(255, 608);
+        public static Point CASTLE_TAVERN_LOCATION = new Point(253, 581);
+        public static Point CASTLE_EXPEDITION_LOCATION = new Point(217, 826);
+        public static Point CASTLE_PLANET_TRIAL_LOCATION = new Point(323, 580);
         //Den Of Secrets
         public static Point DOS_BATTLE_LOCATION = new Point(481, 615);
 

@@ -21,10 +21,11 @@ namespace TapTapHeroesBot.Functions
 
             //Opening up Castle And Resetting it
             MouseHandler.MoveCursorRealPos(LocationConstants.HOME_BOTTOM_CASTLE_LOCATION, true);
-            MouseHandler.MoveCursorRealPos(LocationConstants.IDLE_CLICK);
+            MouseHandler.MoveCursorRealPos(LocationConstants.CASTLE_SCROLL_LOCATION);
             MouseHandler.ResetCastle();
             Main.Sleep(2);
         }
+
 
         public static void OpenBlackSmith()
         {
@@ -110,24 +111,167 @@ namespace TapTapHeroesBot.Functions
             Main.Sleep(2);
             MouseHandler.MouseWheelUp();
 
-            Point Location = new Point();
-
-            if (PixelChecker.SearchPixel(ColourConstants.CASTLE_FORTUNE_WHEEL_COLOR, out Location))
+            //Mouse Wheel Up doesnt always move the same amount upwards so searching for the pixel is used instead of a specific location
+            if (PixelChecker.SearchPixel(ColourConstants.CASTLE_FORTUNE_WHEEL_COLOR, out Point Location))
             {
-                MessageBox.Show("Successfully Found Pixel");
+                MouseHandler.MoveCursorRealPos(Location, true);
+            }
+            else
+            {
+                //TODO: Max 3 Retries before giving up
+                OpenFortuneWheel();
+            }
+        }
+        public static void OpenArena()
+        {
+            OpenCastle();
+            MouseHandler.MouseWheelUp();
+            Main.Sleep(1);
+            MouseHandler.MouseWheelUp();
+
+
+            //Mouse Wheel Up doesnt always move the same amount upwards so searching for the pixel is used instead of a specific location
+            if (PixelChecker.SearchPixel(ColourConstants.CASTLE_ARENA_COLOR, out Point Location))
+            {
+                MouseHandler.MoveCursorRealPos(Location, true);
+            }
+            else
+            {
+                //TODO: Max 3 Retries before giving up
+                OpenArena();
+            }
+        }
+
+        public static void OpenDoS()
+        {
+            OpenCastle();
+            MouseHandler.MouseWheelUp();
+            Main.Sleep(1);
+            MouseHandler.MouseWheelUp();
+            Main.Sleep(1);
+            MouseHandler.MouseWheelUp();
+
+
+            //Mouse Wheel Up doesnt always move the same amount upwards so searching for the pixel is used instead of a specific location
+            if (PixelChecker.SearchPixel(ColourConstants.CASTLE_DOS_COLOR, out Point Location))
+            {
+                MouseHandler.MoveCursorRealPos(Location, true);
+            }
+            else
+            {
+                //TODO: Max 3 Retries before giving up
+                OpenDoS();
+            }
+        }
+
+        public static void OpenMiracleEye()
+        {
+            OpenCastle();
+            MouseHandler.MouseWheelUp();
+            Main.Sleep(1);
+            MouseHandler.MouseWheelUp();
+            Main.Sleep(1);
+            MouseHandler.MouseWheelUp();
+
+
+            //Mouse Wheel Up doesnt always move the same amount upwards so searching for the pixel is used instead of a specific location
+            if (PixelChecker.SearchPixel(ColourConstants.CASTLE_MIRACLE_EYE_COLOR, out Point Location))
+            {
+                MouseHandler.MoveCursorRealPos(Location, true);
+            }
+            else
+            {
+                //TODO: Max 3 Retries before giving up
+                OpenMiracleEye();
+            }
+        }
+
+        public static void OpenTavern()
+        {
+            OpenCastle();
+            MouseHandler.MouseWheelUp();
+            Main.Sleep(1);
+            MouseHandler.MouseWheelUp();
+            Main.Sleep(1);
+            MouseHandler.MouseWheelUp();
+
+
+            //Mouse Wheel Up doesnt always move the same amount upwards so searching for the pixel is used instead of a specific location
+            if (PixelChecker.SearchPixel(ColourConstants.CASTLE_TAVERN_COLOR, out Point Location))
+            {
+                MouseHandler.MoveCursorRealPos(Location, true);
+            }
+            else
+            {
+                //TODO: Max 3 Retries before giving up
+                OpenTavern();
+            }
+        }
+
+        public static void OpenExpedition()
+        {
+            //No Need to call OpenCastle Since this is at top of castle
+
+            //Get Attention of screen incase its not ontop
+            WindowCapture.CaptureApplication("Nox");
+
+            //Opening up Castle
+            MouseHandler.MoveCursorRealPos(LocationConstants.HOME_BOTTOM_CASTLE_LOCATION, true);
+            MouseHandler.MoveCursorRealPos(LocationConstants.CASTLE_SCROLL_LOCATION);
+            Main.Sleep(2);
+
+            //Scrolling to top of castle
+            for (int i = 0; i < 8; i++)
+            {
+                MouseHandler.MouseWheelUp();
+                Main.Sleep(1);
             }
 
-            //Uses same Check as Above since its hard to check for creating bag since its an animation
-            //if (PixelChecker.CheckPixelValue(LocationConstants.CASTLE_FORTUNE_WHEEL_LOCATION, ColourConstants.CASTLE_FORTUNE_WHEEL_COLOR))
-            //{
-            //    MouseHandler.MoveCursorRealPos(LocationConstants.CASTLE_FORTUNE_WHEEL_LOCATION, true);
-            //}
-            //else
-            //{
-            //    //TODO: Max 3 Retry for recalling function
-            //    OpenFortuneWheel(); //Tries Again Until it is clicked
-            //}
+
+            //Search Pixel Method is better than Specific location Since Expedition is an animation
+            if (PixelChecker.SearchPixel(ColourConstants.CASTLE_EXPEDITION_COLOR, out Point Location))
+            {
+                MouseHandler.MoveCursorRealPos(Location, true);
+            }
+            else
+            {
+                //TODO: Max 3 Retries before giving up
+                OpenExpedition();
+            }
         }
+
+        public static void OpenPlanetTrial()
+        {
+            //No Need to call OpenCastle Since this is at top of castle
+
+            //Get Attention of screen incase its not ontop
+            WindowCapture.CaptureApplication("Nox");
+
+            //Opening up Castle
+            MouseHandler.MoveCursorRealPos(LocationConstants.HOME_BOTTOM_CASTLE_LOCATION, true);
+            MouseHandler.MoveCursorRealPos(LocationConstants.CASTLE_SCROLL_LOCATION);
+            Main.Sleep(2);
+
+            //Scrolling to top of castle
+            for (int i = 0; i < 8; i++)
+            {
+                MouseHandler.MouseWheelUp();
+                Main.Sleep(1);
+            }
+
+
+            //Search Pixel Method is better than Specific location Since Expedition is an animation
+            if (PixelChecker.SearchPixel(ColourConstants.CASTLE_PLANET_TRIAL_COLOR, out Point Location))
+            {
+                MouseHandler.MoveCursorRealPos(Location, true);
+            }
+            else
+            {
+                //TODO: Max 3 Retries before giving up
+                OpenPlanetTrial();
+            }
+        }
+
 
     }
 }

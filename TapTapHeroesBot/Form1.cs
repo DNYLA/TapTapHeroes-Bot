@@ -252,7 +252,7 @@ namespace TapTapHeroesBot
 
         private void Button9_Click(object sender, EventArgs e)
         {
-            OpenObject.OpenFortuneWheel();
+            OpenObject.OpenPlanetTrial();
         }
     }
 
