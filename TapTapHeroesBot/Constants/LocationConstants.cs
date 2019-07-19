@@ -64,6 +64,7 @@ namespace TapTapHeroesBot.Constants
         public static Point CASTLE_MARKET_CHECK_LOCATION = new Point(296, 234);
         public static Point CASTLE_MARKET_LOCATION = new Point(387, 266);
         public static Point CASTLE_CREATION_BAG_LOCATION = new Point(230, 140);
+        public static Point CASTLE_FORTUNE_WHEEL_LOCATION = new Point(258, 669);
 
         //Den Of Secrets
         public static Point DOS_BATTLE_LOCATION = new Point(481, 615);

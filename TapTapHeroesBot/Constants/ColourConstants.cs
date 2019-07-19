@@ -61,5 +61,6 @@ namespace TapTapHeroesBot.Constants
         public static Color CASTLE_HERO_CHEST_CHECK_COLOR = Color.FromArgb(160, 100, 39);
         public static Color CASTLE_ALTAR_COLOR = Color.FromArgb(196, 88, 68);
         public static Color CASTLE_MARKET_CHECK_COLOR = Color.FromArgb(170, 152, 120);
+        public static Color CASTLE_FORTUNE_WHEEL_COLOR = Color.FromArgb(115, 200, 212);
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TapTapHeroesBot.Constants;
 
 
@@ -101,6 +103,31 @@ namespace TapTapHeroesBot.Functions
             }
         }
 
+        public static void OpenFortuneWheel()
+        {
+            OpenCastle();
+            MouseHandler.MouseWheelUp();
+            Main.Sleep(2);
+            MouseHandler.MouseWheelUp();
+
+            Point Location = new Point();
+
+            if (PixelChecker.SearchPixel(ColourConstants.CASTLE_FORTUNE_WHEEL_COLOR, out Location))
+            {
+                MessageBox.Show("Successfully Found Pixel");
+            }
+
+            //Uses same Check as Above since its hard to check for creating bag since its an animation
+            //if (PixelChecker.CheckPixelValue(LocationConstants.CASTLE_FORTUNE_WHEEL_LOCATION, ColourConstants.CASTLE_FORTUNE_WHEEL_COLOR))
+            //{
+            //    MouseHandler.MoveCursorRealPos(LocationConstants.CASTLE_FORTUNE_WHEEL_LOCATION, true);
+            //}
+            //else
+            //{
+            //    //TODO: Max 3 Retry for recalling function
+            //    OpenFortuneWheel(); //Tries Again Until it is clicked
+            //}
+        }
 
     }
 }

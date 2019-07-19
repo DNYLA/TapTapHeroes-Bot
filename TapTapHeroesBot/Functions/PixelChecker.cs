@@ -40,6 +40,35 @@ namespace TapTapHeroesBot.Functions
             return false;
         }
 
+        public static Boolean SearchPixel(Color ColorToSearch, out Point Location)
+        {
+            //Takes Screencap of NOX
+            Bitmap ScreenCap = WindowCapture.CaptureApplication("Nox");
+
+            ScreenCap.Save("ScreenTest.bmp");
+
+            Point ProcessLocation = WindowCapture.GetProcessPosition("Nox");
+
+            Location = new Point(0, 0);
+
+            //Loops Through Each Pixel
+            for (int x = 0; x < ScreenCap.Width; x++)
+            {
+                for (int y = 0; y < ScreenCap.Height; y++)
+                {
+                    Color currentPixelColor = ScreenCap.GetPixel(x, y);
+
+                    if (ColorToSearch == currentPixelColor)
+                    {
+                        Location = new Point(x, y);
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
         /// <summary>
         /// Takes a screencap of process and gets the pixel value of location
         /// </summary>
