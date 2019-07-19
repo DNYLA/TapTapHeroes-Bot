@@ -232,7 +232,7 @@ namespace TapTapHeroesBot
 
         private void Button6_Click(object sender, EventArgs e)
         {
-            Attack.DenOfSecretAttackHandler();
+            Attack.PlanetTrialAttackHandler();
         }
 
         private void Button7_Click(object sender, EventArgs e)
@@ -253,6 +253,22 @@ namespace TapTapHeroesBot
         private void Button9_Click(object sender, EventArgs e)
         {
             OpenObject.OpenPlanetTrial();
+        }
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            Size ProcSize = WindowCapture.GetProcessSize("Nox");
+
+            if (ProcSize != new Size(544, 994))
+            {
+                MessageBox.Show("Wrong Resoloution Selected, Bot Stopped. \nGo To NOX >> SETTINGS >> ADVANCED SETTINGS >> 540x960 >> Restore Window Settings \n Start Bot Once Window Size Restored");
+            }
+            else
+            {
+                MessageBox.Show("Valid Size");
+            }
+
+            MessageBox.Show(ProcSize.ToString());
         }
     }
 

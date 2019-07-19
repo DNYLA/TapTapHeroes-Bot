@@ -108,9 +108,45 @@ namespace TapTapHeroesBot
                 error = GetWindowRect(Proc.MainWindowHandle, ref rect);
             }
 
+            
+
             Point Location = new Point(rect.left, rect.top);
 
             return Location;
+        }
+
+        public static Size GetProcessSize(string ProcName)
+        {
+            Process Proc;
+
+            try
+            {
+                Proc = Process.GetProcessesByName(ProcName)[0];
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                return Size.Empty; //Invalid Process Name // Process Not Open
+            }
+
+            // You need to focus on the application
+            SetForegroundWindow(Proc.MainWindowHandle);
+            ShowWindow(Proc.MainWindowHandle, SW_RESTORE);
+            // You need some amount of delay, but 1 second may be overkill
+            Thread.Sleep(1000);
+
+            Rect rect = new Rect();
+            IntPtr error = GetWindowRect(Proc.MainWindowHandle, ref rect);
+
+            // sometimes it gives error.
+            while (error == (IntPtr)0)
+            {
+                error = GetWindowRect(Proc.MainWindowHandle, ref rect);
+            }
+
+            int width = rect.right - rect.left;
+            int height = rect.bottom - rect.top;
+
+            return new Size(width, height);
         }
     }
 }

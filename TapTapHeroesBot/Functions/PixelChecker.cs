@@ -27,10 +27,9 @@ namespace TapTapHeroesBot.Functions
 
             if (bmp.GetPixel(LocationToCheck.X, LocationToCheck.Y) == ColourToCheck)
             {
-                MouseHandler.MoveCursor(PixelScreenLocation);
-
                 if (ClickPixel)
                 {
+                    MouseHandler.MoveCursor(PixelScreenLocation);
                     MouseHandler.MouseLeftClick();
                 }
 

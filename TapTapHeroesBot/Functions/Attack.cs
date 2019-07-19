@@ -56,23 +56,28 @@ namespace TapTapHeroesBot.Functions
             //Gets Attention of screen incase its not ontop
             WindowCapture.CaptureApplication("Nox");
 
+            //Reseting Screen To Home
             Main.ResetToHome();
-
-
-            //Opening Up Castle and Selecting DOS
-            MouseHandler.MoveCursorRealPos(LocationConstants.HOME_BOTTOM_CASTLE_LOCATION, true);
-            MouseHandler.MoveCursorRealPos(LocationConstants.IDLE_CLICK);
-            MouseHandler.ResetCastle();
-            Thread.Sleep(2500);
-            MouseHandler.MouseWheelUp();
-            Thread.Sleep(1000);
-            MouseHandler.MouseWheelUp();
-            Thread.Sleep(1500);
-            MouseHandler.MoveCursorRealPos(LocationConstants.CASTLE_DOS_LOCATION, true);
-            AttackDoS();
+            
+            //Opening Dos
+            OpenObject.OpenDoS();
+            AttackMain();
         }
 
-        public static void AttackDoS()
+        public static void PlanetTrialAttackHandler()
+        {
+            //Gets Attention of screen incase its not ontop
+            WindowCapture.CaptureApplication("Nox");
+
+            //Reseting Screen To Home
+            Main.ResetToHome();
+
+            //Opening Dos
+            OpenObject.OpenPlanetTrial();
+            AttackMain();
+        }
+
+        public static void AttackMain()
         {
             bool AttackingDoS = true;
 
@@ -91,7 +96,7 @@ namespace TapTapHeroesBot.Functions
 
                     while (!BattleFinished)
                     {
-                        Thread.Sleep(3000);
+                        Thread.Sleep(2000);
 
                         if (PixelChecker.CheckPixelValue(LocationConstants.GLOBAL_BATLE_FINISHED_LOCATION, ColourConstants.GLOBAL_OK_COLOR, false))
                         {

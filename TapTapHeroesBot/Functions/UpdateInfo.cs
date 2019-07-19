@@ -56,6 +56,7 @@ namespace TapTapHeroesBot.Functions
 
         public static Boolean MailEmpty()
         {
+            WindowCapture.CaptureApplication("Nox");
 
             if (!Main.ResetToHome())
             {
